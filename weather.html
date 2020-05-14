@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="flex">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="weather info">
+  <meta name="author" content="Amber Nicholas">
+
+  <link rel="stylesheet" type="text/css" href="weather.css">
+
+  <script type="text/javascript" src="weather.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="sun.png" type="image/x-icon"> 
+
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+
+ </head>
+
+ <body class="flex">
+ 	<h1 id="heading">The Daily Weather Report</h1>
+
+ 	 <form id="zipCodeForm">
+ 		<label for="zipCode">Please enter your zip code: </label>
+ 		<input type="text" name="zipCode" id="zipCode"><p id="error" class="hidden"></p>
+ 		<input type="submit" name="submit">
+ 	</form>
+
+ 	<div id="results" class="hidden">
+	 	<p>Let's look at the weather in <span id="city"></span> for today!</p>
+	 	<div id="weatherInfo">
+	 		<table>
+	 			<tr>
+	 				<th>Current Temperature</th>
+	 				<th><span id="temperature"></span>&#176; F</th>
+	 			</tr>
+	 			<tr>
+	 				<td>Highest Temperature (from about 12PM-3PM)</td>
+	 				<td><span id="high"></span>&#176; F</td>
+	 			</tr>
+	 			<tr>
+	 				<td>Lowest Temperature (in the morning and at night)</td>
+	 				<td><span id="low"></span>&#176; F</td>
+	 			</tr>
+	 		</table>
+	 		<p id="description"></p>
+	 		<img src="" id="weatherIcon" alt="picture representing weather">
+	 		<div id="rise">
+		 		<p>The sunrise is when the sun comes out to make it light outside. Today the sunrise is at <span id="sunrise"></span>.</p>
+		 		<img src="day.png" class="sunsetRise">
+		 	</div>
+		 	<div id="set">	
+		 		<p>The sunset is when the sun goes away and the moon comes out. It gets dark after sunset! Today the sunset is at <span id="sunset"></span>.</p>
+		 		<img src="night.png" class="sunsetRise">
+		 	</div>	
+	 	</div>
+	 	<div id="questions">
+	 		<p>Mr. Bear thinks anything below 60 degrees is cold outside. Based on the high temperature, what do you think Mr. Bear should wear today?</p>
+	 		<form>
+	 			<label for="cold-clothes">
+	 				<input type="radio" name="clothes" id="cold-clothes" value="cold">
+	 				<img src="coldClothes.png">
+	 				<p class="hidden" id="bearCold"></p>
+	 			</label>
+	 			<label for="wet-clothes">
+	 				<input type="radio" name="clothes" id="wet-clothes" value="wet">
+	 				<img src="rainClothes.png">
+	 				<p class="hidden" id="bearWet"></p>
+	 			</label>
+	 			<label for="hot-clothes">
+	 				<input type="radio" name="clothes" id="hot-clothes" value="hot">
+	 				<img src="hotClothes.png">
+	 				<p class="hidden" id="bearHot"></p>
+	 			</label>
+	 		</form>
+	 		<p id="clothes" class="hidden"></p>
+	 		<p>Which word best matches the weather today?</p>
+	 		<form id="hotCold" class="answerClicked">
+	 			<input type="radio" name="hotCold" id="hot" value="hot">
+	 			<label for="hot">Hot</label>
+	 			<input type="radio" name="hotCold" id="cold" value="cold">
+	 			<label for="cold">Cold</label>
+	 		</form>
+	 		<p id="hotWord" class="hidden"></p>
+	 		<p>What do you think it feels like outside?</p>
+	 		<form id="wetDry" class="answerClicked">
+	 			<input type="radio" name="wetDry" id="wet" value="wet">
+	 			<label for="wet">Wet</label>
+	 			<input type="radio" name="wetDry" id="dry" value="dry">
+	 			<label for="dry">Dry</label>
+	 		</form>
+	 		<p class="hidden" id="dryWord"></p>
+	 	</div>
+ 	</div>
+ </body>
+
+ </html>
