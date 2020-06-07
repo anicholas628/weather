@@ -146,7 +146,7 @@ body {
 table {
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 350px;
+
 }
 table tr th,
 table tr td {
@@ -183,3 +183,35 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-bottom-right-radius: 6px;
 }
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	/*
+	table {
+		table-layout: fixed;
+		min-width: 90%;
+	}
+	*/
+
+	html {
+		font-size: 1em;
+	}
+	.sunsetRise {
+		width: 100%;
+	}	
+
+	#results {
+		width: 98%;
+	}
+
+
+}
+
+/* Small devices (landscape phones, less than 768px) 
+@media (max-width: 767.98px) { ... } 
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... } */
